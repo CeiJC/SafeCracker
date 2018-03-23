@@ -8,7 +8,7 @@ merchList = [];
 
 function buildRound(){
 	var itemArray = roundData.split(";"); 
-	for(i = 0; i < itemArray.length; i++){
+	for(var i = 0; i < itemArray.length; i++){
 		round = {};
 		var itemParts = itemArray[i].split(":");
 		round.itemRound = itemParts[ROUNDS];
@@ -22,15 +22,16 @@ function buildRound(){
 }
 
 function buildMerch(){
-	itemArray = items.split(";"); 
-	for(i = 0; i < itemArray.length; i++){
+	var itemArray = merchData.split(";"); 
+	for(var i = 0; i < itemArray.length; i++){
 		item = {};
-		itemParts = itemArray[i].split(":");
-		item.itemName = itemParts[NAME];
-		item.itemInfo = itemParts[INFO];
-		item.itemImage = itemParts[IMAGE];
+		var itemParts = itemArray[i].split(":");
+		item.itemName = itemParts[NAMES];
+		item.itemCost = itemParts[COSTS];
+		item.itemUse = itemParts[USES];
+		item.itemDescription = itemParts[DESCRIPTIONS];
 		
-		itemList.push(item);
+		merchList.push(item);
 	}
 }
 			
