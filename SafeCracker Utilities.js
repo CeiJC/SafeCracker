@@ -34,5 +34,13 @@ function buildMerch(){
 		merchList.push(item);
 	}
 }
+function createCombo(r){
+	finalCombo = "";
+	for(var i = 0; i < roundList[r].itemDigit; i++){
+		num = getRandomNumber(1,9);
+		tempNum = String(num);
+		finalCombo = finalCombo + tempNum;
+	}
+}
 			
 		
