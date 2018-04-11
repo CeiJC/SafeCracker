@@ -7,10 +7,7 @@ function subtractRandomNumber(num, min, max){
 	return num - temp;
 }
 function initialize() {
-	currentRound = 0;
-	buildRound();
-	createCombo(currentRound);
-	createTime(currentRound);
+	
 
 }
 
@@ -63,11 +60,24 @@ function createTime(r){
 	
 	alert(roundTime);
 	}
-function flow(){
+function passTime(){
 	totalGuesses = 5;
 	roundTime = subtractRandomNumber(roundTime, 0, totalGuesses);
 
-	if(roundTime <= 0 && "combo not correct"){
-		
+	if(roundTime <= 0){
+		roundTime = 0;
+		gameEnd();
 	}
+}
+function makeGame(){
+	currentRound = 0;
+
+	buildRound();
+	buildMerch();
+	createCombo(currentRound);
+	createTime(currentRound);
+
+}
+function gameEnd(){
+	 
 }
