@@ -2,6 +2,18 @@
 function getRandomNumber(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+function subtractRandomNumber(num, min, max){
+	var temp = getRandomNumber(min, max);
+	return num - temp;
+}
+function initialize() {
+	currentRound = 0;
+	buildRound();
+	createCombo(currentRound);
+	createTime(currentRound);
+
+}
+
 
 roundList = [];
 merchList = [];
@@ -51,3 +63,7 @@ function createTime(r){
 	
 	alert(roundTime);
 	}
+function flow(){
+	totalGuesses = 5;
+	roundTime = subtractRandomNumber(roundTime, 0, totalGuesses);
+}
