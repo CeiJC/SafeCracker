@@ -42,3 +42,12 @@ function createCombo(r){
 		finalCombo = finalCombo + tempNum;
 	}
 }
+function createTime(r){
+	maxVariation = parseInt(roundList[r].itemVariation);
+	variationTime = getRandomNumber(0, maxVariation);
+
+	baseTime = parseInt(roundList[r].itemTime);
+	roundTime = baseTime + variationTime;
+	
+	alert(roundTime);
+	}
