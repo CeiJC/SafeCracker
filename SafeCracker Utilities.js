@@ -7,7 +7,7 @@ roundList = [];
 merchList = [];
 
 function buildRound(){
-	var itemArray = roundData.split(";"); 
+	var itemArray = roundData.split(";");
 	for(var i = 0; i < itemArray.length; i++){
 		round = {};
 		var itemParts = itemArray[i].split(":");
@@ -16,13 +16,13 @@ function buildRound(){
 		round.itemRange = itemParts[RANGES];
 		round.itemTime = itemParts[TIMES];
 		round.itemVariation = getRandomNumber(1, itemParts[VARIATIONS]);
-		
+
 		roundList.push(round);
 	}
 }
 
 function buildMerch(){
-	var itemArray = merchData.split(";"); 
+	var itemArray = merchData.split(";");
 	for(var i = 0; i < itemArray.length; i++){
 		item = {};
 		var itemParts = itemArray[i].split(":");
@@ -30,7 +30,7 @@ function buildMerch(){
 		item.itemCost = itemParts[COSTS];
 		item.itemUse = itemParts[USES];
 		item.itemDescription = itemParts[DESCRIPTIONS];
-		
+
 		merchList.push(item);
 	}
 }
@@ -42,5 +42,3 @@ function createCombo(r){
 		finalCombo = finalCombo + tempNum;
 	}
 }
-			
-		
