@@ -3,25 +3,29 @@
 <html>
 	<head>
 		<title> </title>
+		<script src = "SafeCrackerData.js"></script>
 		<script src = "SafeCracker Utilities.js"></script>
 		<script>
 			function initialize() {
-				createCombo();
-				alert(finalCombo);
+				currentRound = 0;
+				buildRound();
+				createCombo(currentRound);
+				currentRound++;
+
 			}
-		
+
 		</script>
-		
+
 		<style></style>
-	
-	
+
+
 	</head>
 
-	
+
 	<body onload = "initialize();">
-		
-	
-	
+
+
+
 	</body>
 
 
