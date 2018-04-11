@@ -66,4 +66,8 @@ function createTime(r){
 function flow(){
 	totalGuesses = 5;
 	roundTime = subtractRandomNumber(roundTime, 0, totalGuesses);
+
+	if(roundTime <= 0 && "combo not correct"){
+		
+	}
 }
