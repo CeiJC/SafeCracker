@@ -55,19 +55,23 @@ function createCombo(r){
 	}
 }
 function createTime(r){
+	
 	maxVariation = parseInt(roundList[r].itemVariation);
 	variationTime = getRandomNumber(0, maxVariation);
 
 	baseTime = parseInt(roundList[r].itemTime);
 	roundTime = baseTime + variationTime;
-	
-	alert(roundTime);
+	if(roundTime < 0){
+		roundTIme = 0;
+	}else{
+		return;
+	}
 	}
 function flow(){
 	totalGuesses = 5;
 	roundTime = subtractRandomNumber(roundTime, 0, totalGuesses);
 
 	if(roundTime <= 0 && "combo not correct"){
-		
+
 	}
 }
